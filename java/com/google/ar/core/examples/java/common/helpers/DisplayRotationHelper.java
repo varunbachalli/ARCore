@@ -70,6 +70,7 @@ public final class DisplayRotationHelper implements DisplayListener {
    * @param width the updated width of the surface.
    * @param height the updated height of the surface.
    */
+
   public void onSurfaceChanged(int width, int height) {
     viewportWidth = width;
     viewportHeight = height;

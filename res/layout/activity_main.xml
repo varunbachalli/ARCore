@@ -23,7 +23,7 @@
       android:id="@+id/surfaceview"
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-      android:layout_gravity="top"/>
+      android:layout_gravity="top" />
 
   <ImageButton
       android:id="@+id/settings_button"
@@ -35,7 +35,35 @@
       android:src="@drawable/ic_settings"
       android:background="@android:color/transparent"/>
 
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:src="@drawable/center_square"
+      android:background="@android:color/transparent"
+      />
 
+  <Button
+      android:layout_width="100dp"
+      android:layout_height="50dp"
+      android:text = "save data"
+      android:id = "@+id/saveData"
+    android:onClick="setDataBool"
+    />
+
+  <Button
+      android:id="@+id/saveColorImage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="129dp"
+      android:layout_marginEnd="128dp"
+      android:layout_marginBottom="40dp"
+      android:onClick="setColorBool"
+      android:text="Save Color Image" />
 
 
 </RelativeLayout>

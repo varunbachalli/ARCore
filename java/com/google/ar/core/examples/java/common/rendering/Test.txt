@@ -1,0 +1,126 @@
+
+    public synchronized ArrayList<ByteBuffer> SetGetColorImage(ArrayList<ByteBuffer> value) {
+        if (value != null) {
+            Data.color_image = value;
+            return null;
+        }
+
+        return Data.color_image;
+    }
+
+    public synchronized ShortBuffer SetGetDepthImage(ShortBuffer value) {
+        if (value != null) {
+            Data.depth_image = value;
+            return null;
+        }
+
+        return Data.depth_image;
+    }
+
+    public synchronized ArrayList<ArrayList<Float>> SetGetAnchorModelMatrices(List<float[]> modelMatrix) {
+        if (!modelMatrix.isEmpty()) {
+            Data.anchor_model_mtxs.clear();
+            for (float[] x : modelMatrix) {
+                ArrayList<Float> modelMatrices = new ArrayList<Float>();
+                for (float value : x) {
+                    modelMatrices.add(value);
+                }
+                Data.anchor_model_mtxs.add(modelMatrices);
+            }
+        }
+        return Data.anchor_model_mtxs;
+    }
+
+    public synchronized ArrayList<ArrayList<Float>> SetGetAnchorPositionVecs(ArrayList<float[]> positionVecs) {
+        if (!positionVecs.isEmpty()) {
+            Data.anchor_position_vecs.clear();
+            for (float[] x : positionVecs) {
+                ArrayList<Float> positionVectors = new ArrayList<Float>();
+                for (float value : x) {
+                    positionVectors.add(value);
+                }
+                Data.anchor_position_vecs.add(positionVectors);
+            }
+        }
+        return Data.anchor_position_vecs;
+    }
+
+    public synchronized long SetGetTimeStamp(long value) {
+        if (value != Long.MIN_VALUE) {
+            Data.time_stamp = value;
+            return Long.MIN_VALUE;
+        }
+        return Data.time_stamp;
+    }
+
+    public synchronized int SetGetHeightColor(int value) {
+        if (value != Integer.MIN_VALUE) {
+            Data.height_color = value;
+            return Integer.MIN_VALUE;
+        }
+
+        return Data.height_color;
+    }
+
+    public synchronized int SetGetWidthColor(int value) {
+        if (value != Integer.MIN_VALUE) {
+            Data.width_color = value;
+            return Integer.MIN_VALUE;
+        }
+
+        return Data.width_color;
+    }
+
+    public synchronized int SetGetHeightDepth(int value) {
+        if (value != Integer.MIN_VALUE) {
+            Data.height_depth = value;
+            return Integer.MIN_VALUE;
+        }
+
+        return Data.height_depth;
+    }
+
+    public synchronized int SetGetWidthDepth(int value) {
+        if (value != Integer.MIN_VALUE) {
+            Data.width_depth = value;
+            return Integer.MIN_VALUE;
+        }
+
+        return Data.width_depth;
+    }
+
+    public synchronized List<Float> SetGetProjectionMatrix(float[] value) {
+        if (value != null) {
+            Data.projection_mtx.clear();
+            for (float f :
+                    value) {
+                Data.projection_mtx.add(f);
+
+            }
+        }
+        return Data.projection_mtx;
+    }
+
+    public synchronized ArrayList<Float> SetGetViewnMatrix(float[] value) {
+        if (value != null) {
+            Data.view_mtx.clear();
+            for (float f :
+                    value) {
+                Data.view_mtx.add(f);
+
+            }
+        }
+        return Data.view_mtx;
+    }
+
+    public synchronized ArrayList<Float> SetGetCamPose(float[] value) {
+        if (value != null) {
+            Data.cam_pose.clear();
+            for (float f :
+                    value) {
+                Data.cam_pose.add(f);
+
+            }
+        }
+        return Data.cam_pose;
+    }

@@ -37,7 +37,6 @@ import static android.widget.Toast.LENGTH_LONG;
 /** Renders a point cloud. */
 public class PointCloudRenderer {
   private static final String TAG = PointCloud.class.getSimpleName();
-  private PublishPc publishPc;
   // Shader names.
   private static final String VERTEX_SHADER_NAME = "shaders/point_cloud.vert";
   private static final String FRAGMENT_SHADER_NAME = "shaders/point_cloud.frag";
