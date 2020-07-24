@@ -159,7 +159,8 @@ public class DataExtraction {
             public void run() {
                 SavedData data = new SavedData();
                 data = SetGetSavedData(data, false, 1);
-
+		if(data.depth_image.limit()!=0 && data.width_depth!= 0 && data.height_depth!= 0)
+               {
                 short[] depthImageArray = new short[data.depth_image.limit()];
                 data.depth_image.get(depthImageArray);
                 int width = data.width_depth;
@@ -184,6 +185,7 @@ public class DataExtraction {
                     e.printStackTrace();
                 }
 
+            }
             }
         });
     }
